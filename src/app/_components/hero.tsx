@@ -34,7 +34,7 @@ export function Hero() {
                 className="bg-[#2c5ba7] px-5 py-2 rounded-md font-semibold flex items-center w-fit gap-2 hover:bg-[#77adeb] duration-300"
               >
                 <WhatsappLogo className="w-5 h-5" />
-                Agende sua sessão
+                Agende uma avaliação
               </a>
             </div>
           </div>
