@@ -9,12 +9,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-
 export function Hero() {
   return (
     <section className="bg-[#183981] text-[#e0e0e0] relative overflow-hidden">
       <div className="container mx-auto py-16 px-4 pt-16 pb-16 md:pb-0 relative">
-        <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-20">
+        <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-30">
           {/* <Carousel className="w-full max-w-xs">
               <CarouselContent>
                 <CarouselItem>...</CarouselItem>
@@ -31,7 +30,7 @@ export function Hero() {
             <p className="lg:text-lg">Psicanalista</p>
             <div>
               <a
-                href="#"
+                href={`https://wa.me/556198275031?text=Gostaria de agendar uma sessão`}
                 className="bg-[#2c5ba7] px-5 py-2 rounded-md font-semibold flex items-center w-fit gap-2 hover:bg-[#77adeb] duration-300"
               >
                 <WhatsappLogo className="w-5 h-5" />

@@ -73,7 +73,7 @@ export default function Services() {
                         </div>
 
                         <a
-                          href="#"
+                          href={`https://wa.me/556198275031?text=Gostaria de agendar uma sessão`}
                           className="flex items-center justify-center gap-2  hover:bg-[#77adeb] px-4 py-2 rounded-md duration-300"
                         >
                           <WhatsappLogo className="w-5 h-5" />
