@@ -19,7 +19,7 @@ const services = [
   },
 ];
 
-export default function Services() {
+export function Services() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -40,7 +40,7 @@ export default function Services() {
   }
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16" id="services">
       <div className="container mx-auto px-4">
         <div>
           <h2 className="font-600 text-2xl font-bold mb-12">Serviços</h2>

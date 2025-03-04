@@ -1,16 +1,18 @@
-"use client"
+"use client";
 
 import perfil from "../../../public/perfil.png";
 import Image from "next/image";
 
 export function About() {
   return (
-    <section className="bg-[#F7F0E5] py-16">
+    <section className="bg-[#183981] py-16" id="about">
       <div className="container mx-auto py-16 px-4 pt-8 pb-16 md:pb-0 relative">
         <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-20">
           <div className="space-y-4">
-            <h2 className="font-600 text-2xl font-bold mb-12">Quem sou?</h2>
-            <p className="text-md">
+            <h2 className="font-600 text-2xl font-bold mb-12 text-white">
+              Quem sou?
+            </h2>
+            <p className="text-md text-white">
               Meu nome é Max Orsano, sou psicanalista formado em Filosofia e
               Teologia, com especialização em Terapia Cognitivo-Comportamental,
               Saúde Mental, Neurociências e Terapia Familiar Sistêmica. Com mais

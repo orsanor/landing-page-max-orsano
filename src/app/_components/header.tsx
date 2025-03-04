@@ -1,7 +1,10 @@
-import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
-import Link from "next/link";
+"use client"
 
-export default function Header() {
+import { WhatsappLogo } from "@phosphor-icons/react";
+import { Link } from "react-scroll";
+
+
+export function Header() {
   return (
     <header className="py-4 px-6">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -10,42 +13,47 @@ export default function Header() {
           <ul className="flex gap-4">
             <li>
               <Link
-                className="text-black hover:text-[#77adeb] duration-300 font-semibold"
-                rel="stylesheet"
-                href="/"
+                to="about"
+                smooth={true}
+                duration={500}
+                className="text-black hover:text-[#77adeb] duration-300 font-semibold cursor-pointer"
               >
                 Sobre
               </Link>
             </li>
             <li>
               <Link
-                className="text-black hover:text-[#77adeb] duration-300 font-semibold "
-                rel="stylesheet"
-                href="/"
+                to="services"
+                smooth={true}
+                duration={500}
+                className="text-black hover:text-[#77adeb] duration-300 font-semibold cursor-pointer"
               >
                 Serviços
               </Link>
             </li>
             <li>
               <Link
-                className="text-black hover:text-[#77adeb] duration-300 font-semibold "
-                rel="stylesheet"
-                href="/"
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="text-black hover:text-[#77adeb] duration-300 font-semibold cursor-pointer"
               >
                 Contato
               </Link>
             </li>
             <li>
               <Link
-                className="text-black hover:text-[#77adeb] duration-300 font-semibold "
-                rel="stylesheet"
-                href="#"
+                to="blog"
+                smooth={true}
+                duration={500}
+                className="text-black hover:text-[#77adeb] duration-300 font-semibold cursor-pointer"
               >
                 Blog
               </Link>
             </li>
           </ul>
         </nav>
+
         <a
           href={`https://wa.me/556198275031?text=Gostaria de agendar uma sessão`}
           className="bg-[#2c5ba7] px-5 py-2 rounded-md font-semibold flex items-center w-fit gap-2 text-[#e0e0e0] hover:bg-[#77adeb] duration-300"

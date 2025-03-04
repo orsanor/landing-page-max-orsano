@@ -1,3 +1,5 @@
+"use client";
+
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import perfil from "../../../public/perfil.png";
 import Image from "next/image";
