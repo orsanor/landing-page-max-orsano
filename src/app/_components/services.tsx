@@ -29,14 +29,6 @@ export function Services() {
     },
   });
 
-  function scrollPrev() {
-    emblaApi?.scrollPrev();
-  }
-
-  function scrollNext() {
-    emblaApi?.scrollNext();
-  }
-
   return (
     <section className="py-16" id="services">
       <div className="container mx-auto px-4 mt-15">
@@ -52,12 +44,12 @@ export function Services() {
                     key={index}
                     className="w-full sm:w-[calc(100%/2-1rem)] md:w-[calc(100%/4rem)] lg:w-[calc(100%/5-1rem)] max-w-xs"
                   >
-                    <article className=" border-[#0D68B1] border-2 rounded-2xl p-6 space-y-4 h-full flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
-                      <span className="text-3xl text-[#0D68B1]">
+                    <article className="bg-[#0D68B1] rounded-2xl p-6 space-y-4 h-full flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+                      <span className="text-3xl text-white">
                         {item.icon}
                       </span>
 
-                      <h3 className="font-semibold text-xl text-[#0D68B1]">
+                      <h3 className="font-semibold text-xl text-white">
                         {item.title}
                       </h3>
                       <p className="text-[#0D68B1] text-sm">
