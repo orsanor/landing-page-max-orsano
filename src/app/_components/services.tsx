@@ -52,9 +52,9 @@ export function Services() {
                       <h3 className="font-semibold text-xl text-white">
                         {item.title}
                       </h3>
-                      <p className="text-[#0D68B1] text-sm">
+                      {/* <p className="text-[#0D68B1] text-sm">
                         {item.description}
-                      </p>
+                      </p> */}
                     </article>
                   </div>
                 ))}
