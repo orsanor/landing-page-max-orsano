@@ -40,24 +40,26 @@ export function Services() {
   }
 
   return (
-    <section className="bg-white py-16" id="services">
+    <section className="py-16" id="services">
       <div className="container mx-auto px-4">
-        <div>
-          <h2 className="font-600 text-2xl font-bold mb-12">Serviços</h2>
+        <div className="text-center">
+          <h2 className="font-serif text-[28px] text-2xl font-semibold mb-14">
+            Meus Serviços
+          </h2>
           <div className="relative">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 {services.map((item, index) => (
                   <div
                     key={index}
-                    className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3"
+                    className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/4) lg:flex-[0_0_calc(100%/6)] px-3"
                   >
-                    <article className="bg-[#2c5ba7] text-white rounded-2xl p-6 space-y-4 h-full flex flex-col">
-                      <div className="flex-1 flex items-start- justify-between">
+                    <article className="bg-[#0D68B1] text-white rounded-2xl p-6 space-y-4 h-full flex flex-col">
+                      <div className="flex-1 flex items-start justify-between">
+                        <span className="text-3xl">{item.icon}</span>
                         <div className="flex gap-3">
-                          <span className="text-3xl">{item.icon}</span>
                           <div>
-                            <h3 className="font-bold text-xl my-1">
+                            <h3 className="font-semibold text-xl my-1">
                               {item.title}
                             </h3>
                             <p className="text-gray-400 text-sm select-none">
@@ -72,13 +74,13 @@ export function Services() {
                           <span>{item.duration}</span>
                         </div>
 
-                        <a
+                        {/* <a
                           href={`https://wa.me/556198275031?text=Gostaria de agendar uma sessão`}
                           className="flex items-center justify-center gap-2  hover:bg-[#77adeb] px-4 py-2 rounded-md duration-300"
                         >
                           <WhatsappLogo className="w-5 h-5" />
                           Marcar uma sessão
-                        </a>
+                        </a> */}
                       </div>
                     </article>
                   </div>

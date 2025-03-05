@@ -1,57 +1,44 @@
 "use client";
 
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
-import perfil from "../../../public/perfil.png";
 import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import terapia from "../../../public/terapia.jpg";
 
 export function Hero() {
   return (
-    <section className="bg-[#183981] text-[#e0e0e0] relative overflow-hidden">
-      <div className="container mx-auto py-16 px-4 pt-16 pb-16 md:pb-0 relative">
-        <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-30">
-          {/* <Carousel className="w-full max-w-xs">
-              <CarouselContent>
-                <CarouselItem>...</CarouselItem>
-                <CarouselItem>...</CarouselItem>
-                <CarouselItem>...</CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel> */}
-          <div className="space-y-4">
-            <h1 className="text-3xl md:text-4xl font-bold leading-10">
-              Max Orsano
-            </h1>
-            <p className="lg:text-lg">Psicanalista</p>
-            <div>
-              <a
-                href={`https://wa.me/556198275031?text=Gostaria de agendar uma sessão`}
-                className="bg-[#2c5ba7] px-5 py-2 rounded-md font-semibold flex items-center w-fit gap-2 hover:bg-[#77adeb] duration-300"
-              >
-                <WhatsappLogo className="w-5 h-5" />
-                Agende uma avaliação
-              </a>
-            </div>
-          </div>
+    <section className="text-white relative overflow-hidden">
+      <div className="relative w-full flex justify-center mt-5">
+        <div className="relative w-[90%] min-h-[80vh] bg-black/20 bg-blend-multiply flex flex-col justify-end rounded-2xl overflow-hidden">
+          <Image
+            src={terapia}
+            alt="Fundo de Terapia"
+            fill
+            style={{ objectFit: "cover" }}
+            quality={100}
+            className="opacity-90 -z-10"
+          />
 
-          {/* <div className="hidden md:block h-full relative">
-            <Image
-              src={perfil}
-              alt="Max Orsano"
-              className="object-contain"
-              quality={100}
-              sizes="(min-width: 3000px)"
-              layout="fill"
-            />
-          </div> */}
-        </article>
+          <div className="container mx-auto px-4 pb-16 relative">
+            <article className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="space-y-4 z-20">
+                <h1 className="font-sans text-5xl lg:text-5xl md:text-4xl font-semibold leading-10">
+                  Max Orsano
+                </h1>
+                <p className="font-sans text-[20px]">Psicanalista</p>
+                <div>
+                  <a
+                    href="https://wa.me/556198275031?text=Gostaria de agendar uma sessão"
+                    className="bg-[#0D68B1] px-5 py-3 rounded-md font-semibold text-white flex items-center w-fit gap-2 hover:bg-[#77adeb] duration-300 mt-5"
+                  >
+                    <WhatsappLogo className="w-5 h-5" />
+                    Agende uma avaliação
+                  </a>
+                </div>
+              </div>
+              <div className="hidden lg:block"></div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
   );
