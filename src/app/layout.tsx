@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Serif } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${roboto.variable} ${robotoSerif.variable} antialiased bg-[#FFFF]`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
