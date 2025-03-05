@@ -4,103 +4,59 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Clock, User, Users } from "lucide-react";
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 
-const services = [
-  {
-    title: "Terapia de Casal",
-    description: "teste",
-    icon: <User />,
-    duration: "1h",
-  },
-  {
-    title: "Terapia Individual",
-    description: "teste",
-    icon: <Users />,
-    duration: "2h",
-  },
-];
-
 export function Operation() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: false,
-    align: "start",
-    slidesToScroll: 1,
-    breakpoints: {
-      "(min-width:768px)": {
-        slidesToScroll: 3,
-      },
-    },
-  });
-
-  function scrollPrev() {
-    emblaApi?.scrollPrev();
-  }
-
-  function scrollNext() {
-    emblaApi?.scrollNext();
-  }
-
   return (
     <section className="bg-white py-16" id="operation">
-      <div className="container mx-auto px-4">
-        <div>
-          <h2 className="font-600 text-2xl font-bold mb-12">
+      <div className="container mx-auto px-4 mt-15">
+        <div className="text-center">
+          <h2 className="font-serif text-[28px] text-2xl font-semibold mb-20">
             Veja como funcionará seu atendimento
           </h2>
-          {/* <div className="relative">
-            <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex">
-                {services.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3"
-                  >
-                    <article className="bg-[#2c5ba7] text-white rounded-2xl p-6 space-y-4 h-full flex flex-col">
-                      <div className="flex-1 flex items-start- justify-between">
-                        <div className="flex gap-3">
-                          <span className="text-3xl">{item.icon}</span>
-                          <div>
-                            <h3 className="font-bold text-xl my-1">
-                              {item.title}
-                            </h3>
-                            <p className="text-gray-400 text-sm select-none">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="border-t border-gray-700 pt-2 flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-sm">
-                          <Clock className="w-4 h-4" />
-                          <span>{item.duration}</span>
-                        </div>
-
-                        <a
-                          href={`https://wa.me/556198275031?text=Gostaria de agendar uma sessão`}
-                          className="flex items-center justify-center gap-2  hover:bg-[#77adeb] px-4 py-2 rounded-md duration-300"
-                        >
-                          <WhatsappLogo className="w-5 h-5" />
-                          Marcar uma sessão
-                        </a>
-                      </div>
-                    </article>
+          <div className="flex items-center justify-center">
+            <article>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-12 p-6">
+                <div className="flex flex-col items-center text-center border-2 border-[#0D68B1] p-6 rounded-lg max-w-xs hover:scale-105 transition-transform">
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#0D68B1] text-white font-bold rounded-full text-lg mb-4">
+                    1
                   </div>
-                ))}
+                  <h2 className="text-[#0D68B1] font-bold text-xl mb-2">
+                    AVALIAÇÃO
+                  </h2>
+                  <p className="text-[#0D68B1] text-sm">
+                    Agende um primeiro encontro para conversarmos onde você
+                    apresentará todos os desafios que deseja abordar durante o
+                    processo de terapia.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center border-2 border-[#0D68B1] bg-[#0D68B1] text-white p-6 rounded-lg max-w-xs hover:scale-105 transition-transform">
+                  <div className="w-10 h-10 flex items-center justify-center bg-white text-[#0D68B1] font-bold rounded-full text-lg mb-4">
+                    2
+                  </div>
+                  <h2 className="font-bold text-xl mb-2">PLANEJAMENTO</h2>
+                  <p className="text-sm">
+                    A partir da avaliação, eu crio um plano terapêutico
+                    personalizado, adaptado a cada sessão. Este plano inclui a
+                    definição do número de sessões necessárias para o
+                    tratamento.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center border-2 border-[#0D68B1] p-6 rounded-lg max-w-xs hover:scale-105 transition-transform">
+                  <div className="w-10 h-10 flex items-center justify-center bg-[#0D68B1] text-white font-bold rounded-full text-lg mb-4">
+                    3
+                  </div>
+                  <h2 className="text-[#0D68B1] font-bold text-xl mb-2">
+                    AÇÃO
+                  </h2>
+                  <p className="text-[#0D68B1] text-sm">
+                    Por fim, combinamos dia e horário para as sessões e
+                    começamos a resolver os problemas. As sessões são realizadas
+                    de forma conveniente, via Google Meet, WhatsApp Vídeo ou
+                    presencial.
+                  </p>
+                </div>
               </div>
-            </div>
-            <button
-              className="  bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute left-3 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
-              onClick={scrollPrev}
-            >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
-            </button>
-
-            <button
-              className=" bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute -right-6 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
-              onClick={scrollNext}
-            >
-              <ChevronRight className="w-6 h-6 text-gray-600" />
-            </button>
-          </div> */}
+            </article>
+          </div>
         </div>
       </div>
     </section>

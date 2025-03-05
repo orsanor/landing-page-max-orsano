@@ -6,8 +6,8 @@ import terapia from "../../../public/terapia.jpg";
 
 export function Hero() {
   return (
-    <section className="text-white relative overflow-hidden">
-      <div className="relative w-full flex justify-center mt-5">
+    <section className="text-white relative overflow-hidden" id="hero">
+      <div className="relative w-full flex justify-center mt-35">
         <div className="relative w-[90%] min-h-[80vh] bg-black/20 bg-blend-multiply flex flex-col justify-end rounded-2xl overflow-hidden">
           <Image
             src={terapia}

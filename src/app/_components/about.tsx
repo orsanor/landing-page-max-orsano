@@ -6,7 +6,7 @@ import Image from "next/image";
 export function About() {
   return (
     <section className="bg-[#0D68B1] py-16" id="about">
-      <div className="container mx-auto py-16 px-4 pt-8 pb-16 md:pb-0 relative">
+      <div className="container mx-auto py-16 px-4 pt-8 pb-16 md:pb-0 relative mt-20">
         <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-10">
           <div className="hidden md:block h-full relative ml-15">
             {/* <Image
@@ -20,11 +20,11 @@ export function About() {
           </div>
 
           <div className="md:mx-8 lg:mx-12">
-          <div className="text-center">
-            <h2 className="text-[26px] text-2xl font-bold mb-6 text-white">
-              Quem sou?
-            </h2>
-          </div>
+            <div className="text-center">
+              <h2 className="text-[26px] text-2xl font-bold mb-6 text-white">
+                Quem sou?
+              </h2>
+            </div>
             <p className="text-semibold text-[18px] text-white">
               Meu nome é Max Orsano, sou psicanalista formado em Filosofia e
               Teologia, com especialização em Terapia Cognitivo-Comportamental,

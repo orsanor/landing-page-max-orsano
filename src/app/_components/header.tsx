@@ -1,16 +1,24 @@
-"use client"
+"use client";
 
 import { WhatsappLogo } from "@phosphor-icons/react";
 import { Link } from "react-scroll";
 
-
 export function Header() {
   return (
-    <header className="px-6">
+    <header className="px-6 fixed top-0 left-0 w-full z-50 bg-white">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <img src="/logo.png" className="h-32" />
-        <nav className="flex items-center justify-center py-4">
-          <ul className="flex gap-6">
+        <nav>
+          <ul className="flex gap-6 font-semibold">
+            <li>
+              <Link
+                to="hero"
+                smooth={true}
+                duration={500}
+                className="text-black hover:text-[#0D68B1] duration-300 font-semibold cursor-pointer"
+              >
+                Inicio
+              </Link>
+            </li>
             <li>
               <Link
                 to="about"
@@ -53,10 +61,12 @@ export function Header() {
             </li>
           </ul>
         </nav>
-
+        <Link to="hero" smooth={true} duration={500}>
+          <img src="/logo.png" className="h-32 mr-24 cursor-pointer" />
+        </Link>
         <a
           href={`https://wa.me/556198275031?text=Gostaria de agendar uma sessão`}
-          className="bg-[#0D68B1] px-6 py-3 rounded-md font-semibold flex items-center w-fit gap-2 text-white hover:bg-[#77adeb] duration-300"
+          className="bg-[#0D68B1] px-6 py-3 rounded-md font-semibold flex items-center w-fit gap-4 text-white hover:bg-[#77adeb] duration-300"
         >
           <WhatsappLogo className="w-5 h-5" />
           Agende sua sessão

@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${robotoSerif.variable} antialiased bg-[#F7F0E5]`}
+        className={`${roboto.variable} ${robotoSerif.variable} antialiased bg-[#FFFF]`}
       >
         {children}
       </body>
