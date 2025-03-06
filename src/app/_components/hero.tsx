@@ -7,7 +7,7 @@ import terapia from "../../../public/terapia.jpg";
 export function Hero() {
   return (
     <section className="text-white relative overflow-hidden" id="hero">
-      <div className="relative w-full flex justify-center mt-35">
+      <div className="relative w-full flex justify-center mt-30">
         <div className="relative w-[90%] min-h-[80vh] bg-black/20 bg-blend-multiply flex flex-col justify-end rounded-2xl overflow-hidden">
           <Image
             src={terapia}
@@ -24,7 +24,10 @@ export function Hero() {
                 <h1 className="font-sans text-5xl lg:text-5xl md:text-4xl font-semibold leading-10">
                   Max Orsano
                 </h1>
-                <p className="font-sans text-[20px]">Psicanalista</p>
+                <p className="font-sans text-[20px]">
+                  Psicanalista
+                  <p className="font-sans text-[12px]">ABPC - 23/959</p>
+                </p>
                 <div>
                   <a
                     href="https://wa.me/556198275031?text=Gostaria de agendar uma sessão"
